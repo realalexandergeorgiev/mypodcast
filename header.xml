@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:media="http://search.yahoo.com/mrss/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:googleplay="http://www.google.com/schemas/play-podcasts/1.0" xmlns:psc="http://podlove.org/simple-chapters" version="2.0">
+  <channel>
+    <atom:link href="https://pubsubhubbub.appspot.com/" rel="hub"/>
+    <atom:link href="https://handelsblatt-morningbriefing.podigee.io/feed/mp3" rel="self"/>
+    <atom:link href="https://handelsblatt-morningbriefing.podigee.io/feed/mp3" rel="first"/>
+    <atom:link href="https://handelsblatt-morningbriefing.podigee.io/feed/mp3?page=1" rel="last"/>
+    <title>Die 3 Fragezeichen</title>
+    <language>de</language>
+    <pubDate>Thu, 19 Apr 2018 00:00:00 +0000</pubDate>
+    <lastBuildDate>Wed, 22 Nov 2023 04:55:02 +0000</lastBuildDate>
+    <description>Viele tolle Podcasts</description>
+    <link>https://www.handelsblatt.com/audio/podcast-morning-briefing/</link>
+    <generator>Podigee (https://podigee.com)</generator>
+    <itunes:type>episodic</itunes:type>
+    <copyright>@bongoalex</copyright>
+    <image>
+      <url>https://avatars.githubusercontent.com/u/14885291?v=4</url>
+      <title>Viele tolle Podcasts</title>
+      <link>https://www.handelsblatt.com/audio/podcast-morning-briefing/</link>
+    </image>
+    <itunes:image href="https://avatars.githubusercontent.com/u/14885291?v=4"/>
+    <itunes:subtitle></itunes:subtitle>
+    <itunes:author>@bongoalex</itunes:author>
+    <itunes:explicit>no</itunes:explicit>
+    <itunes:keywords>business</itunes:keywords>
+    <itunes:category text="Business"/>
+    <itunes:summary>Viele tolle Podcasts</itunes:summary>
+    <itunes:owner>
+      <itunes:name>@bongoalex</itunes:name>
+      <itunes:email>bongoalex@bongoalex.bongoalex</itunes:email>
+    </itunes:owner>
+
