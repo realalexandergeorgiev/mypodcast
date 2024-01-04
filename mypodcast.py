@@ -197,7 +197,7 @@ if __name__ == "__main__":
     podcast_len = os.path.getsize(input_file) # filesize in bytes
 
     # ask chatgpt for a nice description
-    ai_description = askChatGPTv2("Gib mir eine zusammenfassung zu folgender datei "+filename)
+    ai_description = askChatGPTv2("Gib mir eine zusammenfassung zu folgender datei "+filename.split(".")[0])
     
     # STEP 3
     # create the item
