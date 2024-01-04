@@ -6,11 +6,14 @@ import os
 import requests
 import sys
 import xml.etree.ElementTree as ET
+import openai
 
 ####################################################################################
 # vars #############################################################################
 ####################################################################################
 base_url = "https://bongoalex.bongoalex/"
+openai_org = "org-bar"
+openai_apikey = ("sk-foo")
 ####################################################################################
 # classes ##########################################################################
 ####################################################################################
@@ -57,6 +60,19 @@ class PodcastItem:
 ####################################################################################
 # functions ########################################################################
 ####################################################################################
+def askChatGPTv2(question):
+    openai.organization = openai_org
+    openai.api_key = openai_apikey
+    completion = openai.chat.completions.create(
+        model="gpt-3.5-turbo",
+        messages=[
+            {
+                "role": "user",
+                "content": question,
+            },
+        ],
+    )
+    return(completion.choices[0].message.content)
 def read_file(filename):
     with open(filename, 'r') as file:
         content = file.read()
@@ -180,20 +196,23 @@ if __name__ == "__main__":
     #podcast_len = get_mp3_length(input_file) # length in seconds
     podcast_len = os.path.getsize(input_file) # filesize in bytes
 
+    # ask chatgpt for a nice description
+    ai_description = askChatGPTv2("Gib mir eine zusammenfassung zu folgender datei "+filename)
+    
     # STEP 3
     # create the item
     item = PodcastItem(
         filename,
         filename,
-        "Ein weiterer toller Podcast",
+        ai_description,
         formatted_datetime,
         mp3_url_location,
         mp3_url_location,
-        "Ein weiterer toller Podcast",
+        ai_description,
         "1", # episode
         "full", 
         filename,
-        "Ein weiterer toller Podcast",
+        ai_description,
         "no",
         "keywords",
         "@bongoalex",
