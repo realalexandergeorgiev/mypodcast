@@ -196,10 +196,12 @@ if __name__ == "__main__":
     #podcast_len = get_mp3_length(input_file) # length in seconds
     podcast_len = os.path.getsize(input_file) # filesize in bytes
     filename_title = filename.replace(".mp3","") # remove .mp3 from title
+    print_err("[+] Adding " + filename_title)
 
     # ask chatgpt for a nice description
     ai_description = askChatGPTv2("Gib mir eine zusammenfassung zu folgender datei "+filename.split(".")[0])
-    
+    print_err("[+] Generated description " + ai_description)
+
     # STEP 3
     # create the item
     item = PodcastItem(
